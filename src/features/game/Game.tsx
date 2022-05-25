@@ -32,6 +32,7 @@ import { ClockIssue } from "./components/ClockIssue";
 import { screenTracker } from "lib/utils/screen";
 import { Resetting } from "features/auth/components/Resetting";
 import { GoblinShovel } from "features/farming/crops/components/GoblinShovel";
+import { MutantReward } from "features/farming/crops/components/MutantReward";
 
 const AUTO_SAVE_INTERVAL = 1000 * 30; // autosave every 30 seconds
 const SHOW_MODAL: Record<StateValues, boolean> = {
@@ -100,6 +101,12 @@ export const Game: React.FC = () => {
           )}
           {gameState.matches("synced") && <Success />}
           {gameState.matches("syncing") && <Syncing />}
+        </Panel>
+      </Modal>
+
+      <Modal show>
+        <Panel>
+          <MutantReward crop="Beetroot" fieldIndex={1} onCollected={() => {}} />
         </Panel>
       </Modal>
 
