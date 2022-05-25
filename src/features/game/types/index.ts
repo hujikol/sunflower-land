@@ -147,6 +147,7 @@ export const KNOWN_IDS: Record<InventoryItemName, number> = {
   "Easter Bunny": 909,
   "Engine Core": 910,
   Observatory: 911,
+  "Mutant Crop": 911,
 };
 
 // The reverse of above

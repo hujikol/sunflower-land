@@ -13,6 +13,7 @@ import { CONFIG } from "lib/config";
 import { estimateGasPrice, parseMetamaskError } from "./utils";
 import { SunflowerFarmers } from "./SunflowerFarmers";
 import { MillionOnMars } from "./MillionOnMars";
+import { MutantCrops } from "./MutantCrop";
 
 /**
  * A wrapper of Web3 which handles retries and other common errors.
@@ -29,6 +30,7 @@ export class Metamask {
   private wishingWell: WishingWell | null = null;
   private token: Token | null = null;
   private millionOnMars: MillionOnMars | null = null;
+  private mutantCrops: MutantCrops | null = null;
 
   private account: string | null = null;
 
@@ -57,6 +59,10 @@ export class Metamask {
         this.account as string
       );
       this.millionOnMars = new MillionOnMars(
+        this.web3 as Web3,
+        this.account as string
+      );
+      this.mutantCrops = new MutantCrops(
         this.web3 as Web3,
         this.account as string
       );
@@ -316,6 +322,10 @@ export class Metamask {
 
   public getMillionOnMars() {
     return this.millionOnMars as MillionOnMars;
+  }
+
+  public getMutantCrops() {
+    return this.mutantCrops as MutantCrops;
   }
 
   public get myAccount() {

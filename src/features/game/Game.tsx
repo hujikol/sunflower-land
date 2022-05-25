@@ -43,6 +43,7 @@ const SHOW_MODAL: Record<StateValues, boolean> = {
   error: true,
   levelling: false,
   resetting: true,
+  harvestingMutant: true,
 };
 
 export const Game: React.FC = () => {

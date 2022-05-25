@@ -63,7 +63,7 @@ export interface LimitedItem extends CraftableItem {
   type?: LimitedItemType;
 }
 
-export type MOMEventItem = "Engine Core" | "Observatory";
+export type SpecialEvent = "Engine Core" | "Observatory" | "Mutant Crop";
 
 export type BlacksmithItem =
   | "Sunflower Statue"
@@ -103,7 +103,7 @@ export type LimitedItemName =
   | BarnItem
   | MarketItem
   | Flag
-  | MOMEventItem;
+  | SpecialEvent;
 
 export type Tool =
   | "Axe"
@@ -247,7 +247,7 @@ export const TOOLS: Record<Tool, CraftableItem> = {
   },
 };
 
-export const ROCKET_ITEMS: Record<MOMEventItem, LimitedItem> = {
+export const ROCKET_ITEMS: Record<SpecialEvent, LimitedItem> = {
   "Engine Core": {
     name: "Engine Core",
     description: "The power of the sunflower",
@@ -258,6 +258,10 @@ export const ROCKET_ITEMS: Record<MOMEventItem, LimitedItem> = {
     description: "Explore the stars and improve scientific development",
     section: Section.Observatory,
     type: LimitedItemType.MOMEventItem,
+  },
+  "Mutant Crop": {
+    name: "Mutant Crop",
+    description: "A mutant breed of a crop. Extremely rare",
   },
 };
 
