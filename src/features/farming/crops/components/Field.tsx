@@ -213,6 +213,7 @@ export const Field: React.FC<Props> = ({
         reward={reward}
         onCollected={onCollectReward}
         fieldIndex={fieldIndex}
+        crop={field?.name}
       />
     </div>
   );

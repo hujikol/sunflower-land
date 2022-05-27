@@ -104,8 +104,6 @@ export const Game: React.FC = () => {
         </Panel>
       </Modal>
 
-      <MutantReward crop="Beetroot" fieldIndex={1} onCollected={() => {}} />
-
       <ClockIssue show={gameState.context.offset > 0} />
       <Hud />
       <TeamDonation />
