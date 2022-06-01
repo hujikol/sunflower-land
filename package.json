@@ -11,6 +11,7 @@
     "generate": "graphql-codegen",
     "test": "jest",
     "erc1155": "ts-node --project _scripts/node.tsconfig.json _scripts/erc1155Metadata.ts ",
+    "mutants": "ts-node --project _scripts/node.tsconfig.json _scripts/mutants/prepareMutants.ts ",
     "prepare": "husky install"
   },
   "browserslist": [
